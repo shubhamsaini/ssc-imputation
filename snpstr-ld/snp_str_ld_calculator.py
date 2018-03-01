@@ -373,7 +373,7 @@ def main():
             str_record2 = None
             records = str_reader2.fetch(str_record.CHROM, str_record.POS-START_BUFFER, str_record.POS+1+START_BUFFER)
             for r in records:
-                if r.POS == str_record.POS:
+                if r.ID == str_record.ID:
                     str_record2 = r
                     break
             if str_record2 is None:
